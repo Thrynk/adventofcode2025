@@ -63,7 +63,9 @@ for entry in data:
     if status == pywraplp.Solver.OPTIMAL:
         print(f"Solution: {solver.Objective().Value()}")
         total_presses += solver.Objective().Value()
+        solver.Clear()
     else:
         print("No solution found")
+        solver.Clear()
 
 print(f"Total presses: {total_presses}")

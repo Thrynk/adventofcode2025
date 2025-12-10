@@ -19,6 +19,7 @@ print(calculate_rectangle_area(data[:2]))
 
 max_rectangle_area = 0
 max_rectangle_area_tiles = None
+number_of_rectangles_tried = 0
 for red_tile in data:
     for other_tile in data:
         if red_tile == other_tile:
@@ -27,5 +28,7 @@ for red_tile in data:
         if rectangle_area > max_rectangle_area:
             max_rectangle_area = rectangle_area
             max_rectangle_area_tiles = [red_tile, other_tile]
+        number_of_rectangles_tried += 1
+        print(f"Number of rectangles tried: {number_of_rectangles_tried}")
 print(f"Max rectangle area: {max_rectangle_area}")
 print(f"Max rectangle area tiles: {max_rectangle_area_tiles}")

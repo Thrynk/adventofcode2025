@@ -1,4 +1,6 @@
 numpy~=2.3.5
-scipy
+scipy~=1.16.3
+shapely~=2.1.2
+ortools~=9.14.6206
 
-pytest
+pytest~=9.0.1
